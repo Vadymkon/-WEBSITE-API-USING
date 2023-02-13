@@ -15,10 +15,7 @@ async function logoutfunc()
             console.log(text)
 
             fetchedDiv.innerHTML = ""
-            if (response.ok)
-                fetchedDiv.innerHTML = text
-            else
-                fetchedDiv.innerHTML = "Somethink wrong!"
+            fetchedDiv.innerHTML = response.ok ? text : "Somethink wrong!"
         }
         catch (error)
         {
